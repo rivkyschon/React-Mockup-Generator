@@ -11,7 +11,7 @@ interface RMGImageProps {
 
 const RMGImage: React.FC<RMGImageProps> = ({ src, alt, width, height }) => {
   return (
-    <img
+<img
       src={src}
       alt={alt}
       width={width}

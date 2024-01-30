@@ -10,10 +10,10 @@ interface RMGInputProps {
 const RMGInput: React.FC<RMGInputProps> = ({ placeholder, type }) => {
   return (
     <input
-      type={type}
-      placeholder={placeholder}
-      className="border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500"
-    />
+    type={type}
+    placeholder={placeholder}
+    className="border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500"
+  />
   );
 };
 

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import parse from 'html-react-parser';
+
 import DOMPurify from 'dompurify';
 
 import RMGButton from './RMGButton';
@@ -27,10 +29,11 @@ const AIMockupGenerator = () => {
         'Content-Type': 'application/json'
       }
     });
-        console.log("response  "+response.data.code)
+        const res = response.data.code;
+        console.log("response  "+res)
         // const clean = DOMPurify.sanitize(response.data.code);
         // console.log("clean   "+clean)
-        setComponentCode(response.data.Code.stringify());
+        setComponentCode(res);
     } catch (error) {
       console.error('Error fetching the component code:', error);
       setIsError(true);
@@ -38,17 +41,27 @@ const AIMockupGenerator = () => {
   };
 
   return (
-    <div>
-      <h1>AI Mockup Generator</h1>
-      <input
-        type="text"
-        placeholder="Type here..."
-        value={input}
-        onChange={handleInputChange}
-      />
-      <button onClick={handleSubmit}>Generate Code</button>
-      {isError && <p>There was an error generating the component.</p>}
-      <div dangerouslySetInnerHTML={{ __html: componentCode }} />
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+      <h1 className="text-4xl font-bold text-gray-800 mb-6">AI Mockup Generator</h1>
+      <div className="w-full max-w-md p-8 bg-white shadow-md rounded-lg">
+        <label htmlFor="input" className="block text-lg font-medium text-gray-700 mb-2">Enter Text</label>
+        <input
+          id="input"
+          type="text"
+          placeholder="Type here..."
+          value={input}
+          onChange={handleInputChange}
+          className="w-full p-4 border-2 border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-blue-500 transition-colors"
+        />
+        <button 
+          onClick={handleSubmit}
+          className="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          Generate Code
+        </button>
+        {isError && <p className="text-red-500 text-sm mt-2">There was an error generating the component.</p>}
+      </div>
+      {/* <div dangerouslySetInnerHTML={{ __html:}} /> */}
     </div>
   );
 };

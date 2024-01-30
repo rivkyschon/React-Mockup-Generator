@@ -1,5 +1,5 @@
 import React from 'react';
-import TestPage from './TestPage';
+import TestPage from './pages/TestPage';
 import './index.css';
 import AIMockupGenerator from './components/AIMockupGenerator';
 
