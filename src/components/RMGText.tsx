@@ -8,7 +8,7 @@ interface RMGTextProps {
 
 const RMGText: React.FC<RMGTextProps> = ({ content }) => {
   return (
-    <p className="text-gray-600 text-sm mb-2">{content}</p>  );
-};
+    <p className="bg-gray-100 p-4 rounded shadow">{content}</p>
+    )};
 
 export default RMGText;

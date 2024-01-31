@@ -12,8 +12,9 @@ const RMGInput: React.FC<RMGInputProps> = ({ placeholder, type }) => {
     <input
     type={type}
     placeholder={placeholder}
-    className="border-2 border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500"
+    className="border-2 block border-gray-300 w-full p-3 rounded focus:outline-none focus:border-gray-500"
   />
+
   );
 };
 

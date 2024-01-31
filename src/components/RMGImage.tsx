@@ -11,13 +11,7 @@ interface RMGImageProps {
 
 const RMGImage: React.FC<RMGImageProps> = ({ src, alt, width, height }) => {
   return (
-<img
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className="rounded shadow-lg"
-    />
+    <img className="mx-auto d-block rounded shadow" src={src} alt={alt} />
   );
 };
 

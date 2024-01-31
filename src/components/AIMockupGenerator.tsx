@@ -41,7 +41,7 @@ const AIMockupGenerator = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+    <div className="flex flex-col items-center justify-center h-full bg-gray-100 p-6">
       <h1 className="text-4xl font-bold text-gray-800 mb-6">AI Mockup Generator</h1>
       <div className="w-full max-w-md p-8 bg-white shadow-md rounded-lg">
         <label htmlFor="input" className="block text-lg font-medium text-gray-700 mb-2">Enter Text</label>
