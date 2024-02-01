@@ -1,46 +1,76 @@
-# Getting Started with Create React App
+# RMG AI Mockup Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Screenshot
 
-## Available Scripts
+![image](https://github.com/rivkyschon/React-Mockup-Generator/assets/113901370/1f2b29b2-5050-497e-ba60-7e413476bd25)
 
-In the project directory, you can run:
+## Project Summary
 
-### `npm start`
+The RMG AI Mockup Generator is a React-based web application that utilizes a suite of custom components to create a dynamic and interactive user experience. At the heart of the application is the `AIMockupGenerator`, a component that allows users to input descriptive text and generate corresponding code snippets for their mockup components. This process is facilitated through a backend service, making HTTP requests to convert the user's descriptive text into usable code.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The application's interface is made up of several custom components, including:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- `RMGButton`: A customizable button component.
+- `RMGHeader`: A component for displaying header text.
+- `RMGInput`: An input component for user text entries.
+- `RMGText`: A component for displaying regular text.
+- `RMGImage`: A component for displaying images.
+- `AIMockupGenerator`: The core component where users input text and receive generated code for their mockups.
+- `TestButton`: A button component used for testing or demonstrating functionality.
 
-### `npm test`
+The `MainPage` component serves as the entry point of the application, orchestrating the layout and integration of the individual components into a cohesive interface.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Running the App Locally
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Before you start, ensure you have the following installed:
+- [Node.js and npm](https://nodejs.org/en/): Runtime environment and package manager.
+- [Git](https://git-scm.com/): Version control system.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository**
 
-### `npm run eject`
+   Clone the project repository to your local machine using the following command:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```sh
+   git clone https://github.com/rivkyschon/React-Mockup-Generator.git
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Navigate to the Project Directory**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+After cloning the repository, move into the project directory:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```sh
+cd React-Mockup-Generator
+```
+3. **Install Dependencies**
 
-## Learn More
+Install the necessary node modules
+```sh
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Start the Development Server**
+Run the development server using:
+   
+```sh
+npm start
+```
+This command will start the React application on a local development server, typically available at http://localhost:3000 in your web browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
+
+### Generating Mockups
+
+To generate a mockup, navigate to the `AIMockupGenerator` component in the application.
+
+- Enter the description of the mockup you want to generate in the input field.
+- Click the `Generate Code` button to submit your request.
+- The generated mckuo  will be displayed on the screen if the operation is successful. In case of an error, an error message will be shown.
+
+### Exploring Components
+
+The `TestButton` on the main page allows you to explore all the components included in the application. Clicking it will guide you through the various components and their functionalities.
+
