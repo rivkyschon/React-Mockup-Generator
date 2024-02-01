@@ -58,7 +58,7 @@ Run the development server using:
 ```sh
 npm start
 ```
-This command will start the React application on a local development server, typically available at http://localhost:3000 in your web browser.
+This command will start the React application on a local development server, typically available at http://localhost:5173 in your web browser.
 
 ## Usage
 
