@@ -14,6 +14,7 @@ const AIMockupGenerator = () => {
   const [input, setInput] = useState('');
   const [componentCode, setComponentCode] = useState('');
   const [isError, setIsError] = useState(false);
+  const  API_URL = 'https://react-mockup-generator-api.onrender.com';
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
@@ -22,7 +23,7 @@ const AIMockupGenerator = () => {
   const handleSubmit = async () => {
     try {
 
-      const response = await axios.post('http://localhost:5000/generate-code', {
+      const response = await axios.post(`${API_URL}/generate-code`, {
         description: input
       },
       {headers: {
@@ -61,7 +62,7 @@ const AIMockupGenerator = () => {
         </button>
         {isError && <p className="text-red-500 text-sm mt-2">There was an error generating the component.</p>}
       </div>
-      {/* <div dangerouslySetInnerHTML={{ __html:}} /> */}
+      <div dangerouslySetInnerHTML={{ __html:componentCode}} />
     </div>
   );
 };
