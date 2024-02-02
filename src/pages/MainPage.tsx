@@ -6,6 +6,7 @@ import RMGText from '../components/RMGText';
 import RMGImage from '../components/RMGImage';
 import AIMockupGenerator from '../components/AIMockupGenerator';
 import TestButton from '../components/TestButton';
+import ScreenshotButton from '../components/ScreenShotButton';
 
 const MainPage: React.FC = () => {
 

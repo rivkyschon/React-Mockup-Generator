@@ -1,10 +1,10 @@
 // src/components/RMGButton.tsx
 
-import React from 'react';
+import React from 'react'
 
 interface RMGButtonProps {
-  title: string;
-  onClick?: () => void;
+  title: string
+  onClick?: () => void
 }
 
 const RMGButton: React.FC<RMGButtonProps> = ({ title, onClick }) => {
@@ -15,8 +15,7 @@ const RMGButton: React.FC<RMGButtonProps> = ({ title, onClick }) => {
     >
       {title}
     </button>
-  );
-};
+  )
+}
 
-export default RMGButton;
-
+export default RMGButton

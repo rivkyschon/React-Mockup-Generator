@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import TestPage from '../pages/TestPage';
+import React, { useState } from 'react'
+import TestPage from '../pages/TestPage'
 
 interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean
+  onClose: () => void
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
+  if (!isOpen) return null
 
   return (
     <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" id="my-modal">
@@ -31,14 +31,14 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const TestButton: React.FC = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false)
 
-  const handleOpen = () => setModalOpen(true);
-  const handleClose = () => setModalOpen(false);
+  const handleOpen = () => { setModalOpen(true) }
+  const handleClose = () => { setModalOpen(false) }
 
   return (
     <div className="App">
@@ -51,7 +51,7 @@ const TestButton: React.FC = () => {
 
       <Modal isOpen={isModalOpen} onClose={handleClose} />
     </div>
-  );
-};
+  )
+}
 
-export default TestButton;
+export default TestButton
