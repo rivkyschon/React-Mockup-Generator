@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RMGLabel renders correctly 1`] = `
+<DocumentFragment>
+  <label
+    class="block text-lg font-medium text-gray-700 mb-2"
+    for="email"
+  >
+    Label Content
+  </label>
+</DocumentFragment>
+`;

@@ -1,15 +1,17 @@
 // src/components/RMGText.tsx
 
-import React from 'react'
+import React from 'react';
 
 interface RMGTextProps {
-  content: string
+  content: string;
 }
 
-const RMGText: React.FC<RMGTextProps> = ({ content }) => {
+const RMGText: React.FC<RMGTextProps> = ({content}) => {
   return (
-    <p className="bg-gray-100 p-4 rounded shadow">{content}</p>
-  )
-}
+    <p className="text-gray-500 text-lg md:text-l font-normal leading-relaxed text-center">
+      {content}
+    </p>
+  );
+};
 
-export default RMGText
+export default RMGText;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RMGInput renders correctly 1`] = `
+<DocumentFragment>
+  <input
+    class="border-2 block border-gray-300 w-full p-3 rounded focus:outline-none focus:border-gray-500"
+    placeholder="Enter text"
+    type="text"
+  />
+</DocumentFragment>
+`;

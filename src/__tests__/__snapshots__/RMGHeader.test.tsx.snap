@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RMGHeader renders correctly 1`] = `
+<DocumentFragment>
+  <h1
+    class=" text-center font-bold text-4xl text-gray-900 mb-6"
+  >
+    Test Header
+  </h1>
+</DocumentFragment>
+`;

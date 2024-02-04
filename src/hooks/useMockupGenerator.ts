@@ -1,19 +1,22 @@
-import { useState } from 'react';
-import { generateMockupCode } from '../services/APIService';
+import {useState} from 'react';
+import {generateMockupCode} from '../services/APIService';
+import {ComponentFactoryConfig} from '../services/ComponentFactoryService';
 
 interface UseMockupGeneratorHook {
   input: string;
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: () => Promise<void>;
   handleKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => void;
-  componentCode: string;
+  componentsConfig: ComponentFactoryConfig[];
   isError: boolean;
 }
 
 export const useMockupGenerator = (): UseMockupGeneratorHook => {
   const [input, setInput] = useState<string>('');
-  const [componentCode, setComponentCode] = useState<string>('');
   const [isError, setIsError] = useState<boolean>(false);
+  const [componentsConfig, setComponentsConfig] = useState<
+    ComponentFactoryConfig[]
+  >([]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
@@ -24,8 +27,10 @@ export const useMockupGenerator = (): UseMockupGeneratorHook => {
     if (!input.trim()) return; // Prevent submitting empty input
 
     try {
-      const code = await generateMockupCode(input);
-      setComponentCode(code);
+      const response: ComponentFactoryConfig[] = await generateMockupCode(
+        input,
+      );
+      setComponentsConfig(response);
       setInput(''); // Clear the input field after submission
     } catch (error) {
       setIsError(true);
@@ -44,7 +49,7 @@ export const useMockupGenerator = (): UseMockupGeneratorHook => {
     handleInputChange,
     handleSubmit,
     handleKeyDown,
-    componentCode,
-    isError
+    componentsConfig,
+    isError,
   };
 };

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RMGText renders correctly 1`] = `
+<DocumentFragment>
+  <p
+    class="text-gray-500 text-lg md:text-l font-normal leading-relaxed text-center"
+  >
+    Test Content
+  </p>
+</DocumentFragment>
+`;
