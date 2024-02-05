@@ -21,6 +21,7 @@ const AIMockupGenerator: React.FC = () => {
     isError,
     isLoading,
     isModalOpen,
+    handleCloseModal,
   } = useMockupGenerator();
 
   return (
@@ -58,7 +59,13 @@ const AIMockupGenerator: React.FC = () => {
 
       {isLoading && <MyLoader />}
 
-      <Modal isOpen={isModalOpen} onClose={() => null}>
+      <Modal isOpen={isModalOpen}>
+        <ScreenshotButton />
+        <RMGButton
+          className="text-center mb-4 font-bold text-gray-800 p-4 hover:bg-gray-300 rounded-full"
+          title="close"
+          onClick={handleCloseModal}
+        />
         <RMGContainer>
           <DynamicUIComponent components={components} />
         </RMGContainer>

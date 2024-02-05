@@ -11,8 +11,9 @@ const ScreenshotButton: React.FC = (): ReactElement => {
   };
   return (
     <RMGButton
-      className="bg-blue-500 hover:bg-blue-700 text-white p-4 rounded-full inline-flex items-center justify-center"
-      title="&#8681;"
+      className="text-center mb-4 font-bold text-gray-800 p-4 hover:bg-gray-300 rounded-full "
+      // title="&#8681;"
+      title="Download"
       onClick={handleTakeScreenshot}
     />
   );

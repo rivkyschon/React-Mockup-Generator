@@ -11,6 +11,7 @@ interface UseMockupGeneratorHook {
   isError: boolean;
   isLoading: boolean;
   isModalOpen: boolean;
+  handleCloseModal: () => void;
 }
 
 export const useMockupGenerator = (): UseMockupGeneratorHook => {
@@ -24,9 +25,12 @@ export const useMockupGenerator = (): UseMockupGeneratorHook => {
     setInput(e.target.value);
   };
 
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
   const handleSubmit = async () => {
-    setIsError(false); // Reset error state before attempting submission
-    if (!input.trim()) return; // Prevent submitting empty input
+    setIsError(false);
+    if (!input.trim()) return;
 
     setInput('');
     setIsLoading(true);
@@ -57,5 +61,6 @@ export const useMockupGenerator = (): UseMockupGeneratorHook => {
     isError,
     isLoading,
     isModalOpen,
+    handleCloseModal,
   };
 };

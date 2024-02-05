@@ -22,7 +22,7 @@ const TestButton: React.FC = () => {
         Show Components
       </button>
 
-      <Modal isOpen={isOpen} onClose={handleClose}>
+      <Modal isOpen={isOpen}>
         <div>
           {' '}
           <h3 className="text-4xl text-center font-bold text-blue-500 mb-6">
