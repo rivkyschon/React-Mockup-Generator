@@ -5,7 +5,7 @@
 ![image](https://github.com/rivkyschon/React-Mockup-Generator/assets/113901370/1f2b29b2-5050-497e-ba60-7e413476bd25)
 Sample mockups that were generated..
 
-<img width="476" alt="Screenshot 2024-02-05 015500" src="https://github.com/rivkyschon/React-Mockup-Generator/assets/113901370/42a10ff4-139e-47f0-9225-6a57d0354fd8">
+<img width="450" alt="Screenshot 2024-02-05 015500" src="https://github.com/rivkyschon/React-Mockup-Generator/assets/113901370/51908114-299a-49d4-a6de-3a111812fc8f">
 
 <img width="472" alt="Screenshot 2024-02-05 021331" src="https://github.com/rivkyschon/React-Mockup-Generator/assets/113901370/946c191c-0f01-471f-8b8f-5f27baa24848">
 
