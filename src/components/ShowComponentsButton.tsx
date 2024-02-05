@@ -25,7 +25,7 @@ const TestButton: React.FC = () => {
       <Modal isOpen={isOpen} onClose={handleClose}>
         <div>
           {' '}
-          <h3 className="text-4xl font-bold text-blue-500 mb-6">
+          <h3 className="text-4xl text-center font-bold text-blue-500 mb-6">
             Available components:
           </h3>
           <div className="w-full mt-2 px-7 py-3">

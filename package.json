@@ -16,6 +16,7 @@
     "postcss": "^8.4.33",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-loading-overlay-ts": "^2.0.2",
     "ts-node": "^10.9.2",
     "web-vitals": "^2.1.4"
   },
@@ -50,6 +51,7 @@
   "devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
+    "@heroicons/react": "^2.1.1",
     "@testing-library/jest-dom": "^6.4.1",
     "@testing-library/react": "^14.2.1",
     "@types/dompurify": "^3.0.5",

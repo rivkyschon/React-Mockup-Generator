@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {render} from '@testing-library/react';
-import RMGLabel from '../components/RMGLabel';
+import RMGLabel from '../components/core/RMGLabel';
 
 describe('RMGLabel', () => {
   it('renders correctly', () => {

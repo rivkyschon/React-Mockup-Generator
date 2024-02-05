@@ -1,6 +1,6 @@
 import React, {ReactElement} from 'react';
 import {takeScreenshot, downloadImage} from '../services/ScreenshotService';
-import RMGButton from './RMGButton';
+import RMGButton from './core/RMGButton';
 
 const ScreenshotButton: React.FC = (): ReactElement => {
   const handleTakeScreenshot = async () => {

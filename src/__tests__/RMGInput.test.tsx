@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {render} from '@testing-library/react';
-import RMGInput from '../components/RMGInput';
+import RMGInput from '../components/core/RMGInput';
 
 describe('RMGInput', () => {
   it('renders correctly', () => {

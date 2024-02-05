@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {render} from '@testing-library/react';
-import RMGHeader from '../components/RMGHeader';
+import RMGHeader from '../components/core/RMGHeader';
 
 describe('RMGHeader', () => {
   it('renders correctly', () => {

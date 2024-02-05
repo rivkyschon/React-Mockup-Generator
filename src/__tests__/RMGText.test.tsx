@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {render} from '@testing-library/react';
-import RMGText from '../components/RMGText';
+import RMGText from '../components/core/RMGText';
 
 describe('RMGText', () => {
   it('renders correctly', () => {

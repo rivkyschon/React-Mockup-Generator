@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {render} from '@testing-library/react';
-import RMGImage from '../components/RMGImage';
+import RMGImage from '../components/core/RMGImage';
 
 describe('RMGImage', () => {
   it('renders correctly', () => {

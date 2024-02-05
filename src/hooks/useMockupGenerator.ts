@@ -1,22 +1,24 @@
 import {useState} from 'react';
-import {generateMockupCode} from '../services/APIService';
-import {ComponentFactoryConfig} from '../services/ComponentFactoryService';
+import {generateMockupCode} from '../services/GenerateCodeService';
+import {ComponentConfig} from '../services/ComponentFactoryService';
 
 interface UseMockupGeneratorHook {
   input: string;
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: () => Promise<void>;
   handleKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => void;
-  componentsConfig: ComponentFactoryConfig[];
+  components: ComponentConfig[];
   isError: boolean;
+  isLoading: boolean;
+  isModalOpen: boolean;
 }
 
 export const useMockupGenerator = (): UseMockupGeneratorHook => {
   const [input, setInput] = useState<string>('');
   const [isError, setIsError] = useState<boolean>(false);
-  const [componentsConfig, setComponentsConfig] = useState<
-    ComponentFactoryConfig[]
-  >([]);
+  const [components, setComponents] = useState<ComponentConfig[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
@@ -26,12 +28,14 @@ export const useMockupGenerator = (): UseMockupGeneratorHook => {
     setIsError(false); // Reset error state before attempting submission
     if (!input.trim()) return; // Prevent submitting empty input
 
+    setInput('');
+    setIsLoading(true);
+
     try {
-      const response: ComponentFactoryConfig[] = await generateMockupCode(
-        input,
-      );
-      setComponentsConfig(response);
-      setInput(''); // Clear the input field after submission
+      const response: ComponentConfig[] = await generateMockupCode(input);
+      setComponents(response);
+      setIsLoading(false);
+      setIsModalOpen(true);
     } catch (error) {
       setIsError(true);
     }
@@ -39,7 +43,7 @@ export const useMockupGenerator = (): UseMockupGeneratorHook => {
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      e.preventDefault(); // Prevent the default action to avoid submitting a form if there is one
+      e.preventDefault();
       handleSubmit();
     }
   };
@@ -49,7 +53,9 @@ export const useMockupGenerator = (): UseMockupGeneratorHook => {
     handleInputChange,
     handleSubmit,
     handleKeyDown,
-    componentsConfig,
+    components,
     isError,
+    isLoading,
+    isModalOpen,
   };
 };

@@ -1,14 +1,14 @@
 import axios from 'axios';
-import {ComponentFactoryConfig} from './ComponentFactoryService';
+import {ComponentConfig} from './ComponentFactoryService';
 import {Logger} from 'html2canvas/dist/types/core/logger';
 import {Console} from 'console';
 const API_URL = 'http://localhost:5000';
 
 export const generateMockupCode = async (
   input: string,
-): Promise<ComponentFactoryConfig[]> => {
+): Promise<ComponentConfig[]> => {
   try {
-    const response = await axios.post<{code: ComponentFactoryConfig[]}>(
+    const response = await axios.post<{code: ComponentConfig[]}>(
       `${API_URL}/generate-code`,
       {
         description: input,

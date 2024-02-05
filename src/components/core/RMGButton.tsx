@@ -14,7 +14,7 @@ const RMGButton: React.FC<RMGButtonProps> = ({title, className, onClick}) => {
       onClick={onClick}
       className={
         className ||
-        'bg-black text-white py-2 px-4 rounded hover:bg-opacity-90 focus:outline-none'
+        'bg-black text-white w-full py-2 px-4 rounded hover:bg-opacity-90 focus:outline-none'
       }>
       {title}
     </button>

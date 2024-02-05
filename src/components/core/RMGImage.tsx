@@ -11,7 +11,7 @@ interface RMGImageProps {
 
 const RMGImage: React.FC<RMGImageProps> = ({src, alt, width, height}) => {
   return (
-    <div className="w-60 h-60 flex justify-center items-center bg-gray-200">
+    <div className="w-60 h-60 m-auto flex justify-center items-center bg-gray-200">
       <img
         className="mx-auto d-block rounded shadow"
         src={src || 'https://placehold.jp/150x150.png'}
