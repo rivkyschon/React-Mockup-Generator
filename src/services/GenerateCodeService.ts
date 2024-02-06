@@ -2,7 +2,7 @@ import axios from 'axios';
 import {ComponentConfig} from './ComponentFactoryService';
 import {Logger} from 'html2canvas/dist/types/core/logger';
 import {Console} from 'console';
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://react-mockup-generator-api.onrender.com';
 
 export const generateMockupCode = async (
   input: string,
